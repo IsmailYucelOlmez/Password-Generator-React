@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  font-size: 18px;
+  font-family: 'Overlock', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  height: 100vh;
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #fff;
+  padding: 20px;
+  width: 50%; 
+  border-radius: 20px;
+}
+.input-field{ 
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-field input{
+  width: 48%;
+  padding: 5px;
+  border-radius: 10px;
+  border: 0;
+}
+.input-field button{
+  background-color: transparent;
+  border: 0;
+  color: #02040f;
+
+}
+.options-field{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.filter-element{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+.filter-element label{
+  margin: 10px;
+}
+.popup-field{
+  position: absolute;
+  top: 70%;
+  left: 43%;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color:#fff;
+  background-color: #e63946;
+
+}
+.popup-field i{
+  margin-right: 10px;
+  color: #fff;
+  
+}
+.show-btn{
+  font-family: inherit;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: inherit;
+  margin-top: 10px;
+  transition: 0.3s;
+  background-color: #02040f;
+}  
+.show-btn:hover{
+  transition: ease;
+  background-color: #04e762;
+  color: #02040f;
+  border-color: #02040f;
+}
+
+input{
+  font-family: inherit;
+}
+
+input[type=number]{
+
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  width: 15%;
+  border: 0;
+}
+input[type=checkbox]{
+
+  width: 20px;
+  height: 20px;
+  margin-right: 22px;
+}
+.fa-clipboard{
+  font-size: 25px;
+  margin-left: 10px;
+ 
+}
+.fa-xmark{
+  font-size: 20px;
+}
+*:focus{
+  outline: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .content{
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  input[type=number]{
+    width: 23%;
+  }
+  .popup-field{
+    left: 30%;
   }
 }
